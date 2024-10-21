@@ -1,6 +1,6 @@
 baseURL: https://paulkm2006.github.io
 languageCode: en-us
-defaultContentLanguage: zh-cn
+defaultContentLanguage: en
 title: Paul's Blog
 
 theme: hugo-coder
