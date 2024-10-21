@@ -27,11 +27,3 @@ menu:
       name: "Posts"
       url: "/posts"
       weight: 2
-    - identifier: "tags"
-      name: "Tags"
-      url: "/tags/"
-      weight: 3
-    - identifier: "categories"
-      name: "Categories"
-      url: "/categories/"
-      weight: 4

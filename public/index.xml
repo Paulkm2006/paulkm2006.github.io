@@ -2,18 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paul&#39;s Blog</title>
-    <link>https://paulkm2006.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Paul&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2024 11:32:57 +0800</lastBuildDate>
-    <atom:link href="https://paulkm2006.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 21 Oct 2024 12:50:24 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Task0 Notes</title>
+      <link>http://localhost:1313/posts/task0/</link>
+      <pubDate>Mon, 21 Oct 2024 12:50:24 +0800</pubDate>
+      <guid>http://localhost:1313/posts/task0/</guid>
+      <description>&lt;h2 id=&#34;process--thread&#34;&gt;&#xD;&#xA;  Process &amp;amp; Thread&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#process--thread&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;process&#34;&gt;&#xD;&#xA;  Process&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#process&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;In plain language, a single application. It owns dedicated memory and resource pool. Creation of processes are handled by OS, which takes more time and causes slower termination.&lt;/p&gt;&#xA;&lt;p&gt;Processes are best used to complete a task that doesn&amp;rsquo;t involve intensive data exchange within processes.&lt;/p&gt;&#xA;&lt;h3 id=&#34;thread&#34;&gt;&#xD;&#xA;  Thread&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#thread&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Threads are minimal version of processes. They are created, managed and scheduled by a proces. Threads shares the same memory and resources, making data exchanges easy and fast.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/learningpath/</link>
+      <pubDate>Mon, 21 Oct 2024 11:43:32 +0800</pubDate>
+      <guid>http://localhost:1313/posts/learningpath/</guid>
+      <description></description>
+    </item>
     <item>
       <title>First Post</title>
-      <link>https://paulkm2006.github.io/posts/quickstart/</link>
+      <link>http://localhost:1313/posts/quickstart/</link>
       <pubDate>Mon, 21 Oct 2024 11:23:56 +0800</pubDate>
-      <guid>https://paulkm2006.github.io/posts/quickstart/</guid>
-      <description>&lt;h1 id=&#34;hello-world&#34;&gt;&#xD;&#xA;  Hello world!&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#hello-world&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;链接到标题&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;链接到标题&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;</description>
+      <guid>http://localhost:1313/posts/quickstart/</guid>
+      <description>&lt;h1 id=&#34;hello-world&#34;&gt;&#xD;&#xA;  Hello world!&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#hello-world&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h1&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 21 Oct 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;who-am-i&#34;&gt;&#xD;&#xA;  Who am I?&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#who-am-i&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;HUST CS Freshman(2024)&lt;/li&gt;&#xA;&lt;li&gt;Member of Backend Team, Bingyan Studio&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-can-i-do&#34;&gt;&#xD;&#xA;  What can I do?&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-can-i-do&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Various knowledge on computer-related stuffs&lt;/li&gt;&#xA;&lt;li&gt;Relatively skilled in Python, especially on using Flask&lt;/li&gt;&#xA;&lt;li&gt;Little knowledge on C, C++, Go&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;what-am-i-going-to-do-next&#34;&gt;&#xD;&#xA;  What am I going to do next?&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#what-am-i-going-to-do-next&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Learn to use Go and Echo&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
