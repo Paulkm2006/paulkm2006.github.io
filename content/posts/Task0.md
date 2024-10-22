@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2024-10-21T12:50:24+08:00
 title = "Task0 Notes"
 description = ""
@@ -61,3 +61,29 @@ Header is a json object encoded with BaseURL64 (a modified version of base64 tha
 A standard payload might contain these 7 optional keywords: iss(uer), exp(iration time), sub(ject), aud(ience), nbf(Not before), iat(Issue at) and jti(JWT ID). Additionally, we can specify our own keywords like admin or userGroup.
 ### Signature
 Signature helps to prevent unauthorized modification to the first two parts. It is generated from a secret, using the algorithm designated in header.
+
+## RESTful API
+
+A typical RESTful request should look like this.
+![img](/images/Task0/restful_request.png)
+Note that not all API endpoints may contain version info.
+
+And a typical RESTful response should be a JSON string containing resources designated by the request method and resource type (e.g. info of a new object for POST, a collection for GET /collection and empty document for DELETE)
+
+## Angular commit message
+
+A well-formed commit message should contain these parts:
+```<type>(<scope>): <subject>```
+#### type
+should be one of the following types:
+1. feat(ure), a new feature
+2. docs, modification to documents
+3. fix, to fix a bug
+4. ci/cd, modification to ci/cd script or configuration
+5. pref, improve performance
+also, style test revert and build are also valid types
+#### scope
+where the modification is implemented, usually the name of the module
+#### subject
+what does the modification try to do
+

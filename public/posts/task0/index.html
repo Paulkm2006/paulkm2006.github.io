@@ -56,7 +56,7 @@ ThreadLink to headingThreads are minimal version of processes. They are create
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-10-21T12:50:24+08:00">
-    <meta property="article:modified_time" content="2024-10-21T12:50:24+08:00">
+    <meta property="article:modified_time" content="2024-10-21T20:40:05+08:00">
 
 
 
@@ -179,7 +179,7 @@ ThreadLink to headingThreads are minimal version of processes. They are create
             </span>
             <span class="reading-time">
               <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              2-minute read
+              4-minute read
             </span>
           </div>
           
@@ -240,6 +240,123 @@ The reason is that when multiple operations (eg. read-modify-write) at the same 
 <img src="/images/Task0/nolock.png" alt="img"></p>
 <p>To avoid these potential errors, we can implement lock mechanism on variables that might be modified during parallel computing. When one thread is making changes to the variable, we block other threads from modifying the save variables, while being able to perform other operations like read and calculate. This can ensure data integrity while allowing maximize performance.
 <img src="/images/Task0/lock.png" alt="img"></p>
+<h2 id="mvc">
+  MVC
+  <a class="heading-link" href="#mvc">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>MVC separates a server into model, view and controller.</p>
+<h3 id="model">
+  Model
+  <a class="heading-link" href="#model">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Model handles everything that involves database and other api providers.</p>
+<h3 id="view">
+  View
+  <a class="heading-link" href="#view">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>View is less important in backend development. We can simply apply a json formatter as view.</p>
+<h3 id="controller">
+  Controller
+  <a class="heading-link" href="#controller">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Controller handles the request from frontend, redirect it to proper model and returns the value.</p>
+<h2 id="jwt">
+  JWT
+  <a class="heading-link" href="#jwt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In order to help multiple backend servers to identify a user, whether in a cluster or in different sites, the traditional session+cookie method will require an additional identity database, which can cause a lot of troubles when it goes down. So, in order to help simplify auth process and increase expansibility, JWT is introduced.</p>
+<p>A typical JWT contains three parts: Header, Payload and Signature, separating by a dot.</p>
+<h3 id="header">
+  Header
+  <a class="heading-link" href="#header">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Header is a json object encoded with BaseURL64 (a modified version of base64 that exclude some non-URI characters like = , + and /). It contains information about the algorithm used by signature and the type of the token (which is just &ldquo;JWT&rdquo;)</p>
+<h3 id="payload">
+  Payload
+  <a class="heading-link" href="#payload">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A standard payload might contain these 7 optional keywords: iss(uer), exp(iration time), sub(ject), aud(ience), nbf(Not before), iat(Issue at) and jti(JWT ID). Additionally, we can specify our own keywords like admin or userGroup.</p>
+<h3 id="signature">
+  Signature
+  <a class="heading-link" href="#signature">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Signature helps to prevent unauthorized modification to the first two parts. It is generated from a secret, using the algorithm designated in header.</p>
+<h2 id="restful-api">
+  RESTful API
+  <a class="heading-link" href="#restful-api">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>A typical RESTful request should look like this.
+<img src="/images/Task0/restful_request.png" alt="img">
+Note that not all API endpoints may contain version info.</p>
+<p>And a typical RESTful response should be a JSON string containing resources designated by the request method and resource type (e.g. info of a new object for POST, a collection for GET /collection and empty document for DELETE)</p>
+<h2 id="angular-commit-message">
+  Angular commit message
+  <a class="heading-link" href="#angular-commit-message">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>A well-formed commit message should contain these parts:
+<code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;</code></p>
+<h4 id="type">
+  type
+  <a class="heading-link" href="#type">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>should be one of the following types:</p>
+<ol>
+<li>feat(ure), a new feature</li>
+<li>docs, modification to documents</li>
+<li>fix, to fix a bug</li>
+<li>ci/cd, modification to ci/cd script or configuration</li>
+<li>pref, improve performance
+also, style test revert and build are also valid types</li>
+</ol>
+<h4 id="scope">
+  scope
+  <a class="heading-link" href="#scope">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>where the modification is implemented, usually the name of the module</p>
+<h4 id="subject">
+  subject
+  <a class="heading-link" href="#subject">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>what does the modification try to do</p>
 
       </div>
 

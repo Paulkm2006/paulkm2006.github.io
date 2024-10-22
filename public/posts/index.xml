@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Paul&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2024 12:50:24 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 Oct 2024 20:40:05 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Task0 Notes</title>
@@ -16,11 +16,11 @@
       <description>&lt;h2 id=&#34;process--thread&#34;&gt;&#xD;&#xA;  Process &amp;amp; Thread&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#process--thread&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;h3 id=&#34;process&#34;&gt;&#xD;&#xA;  Process&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#process&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;In plain language, a single application. It owns dedicated memory and resource pool. Creation of processes are handled by OS, which takes more time and causes slower termination.&lt;/p&gt;&#xA;&lt;p&gt;Processes are best used to complete a task that doesn&amp;rsquo;t involve intensive data exchange within processes.&lt;/p&gt;&#xA;&lt;h3 id=&#34;thread&#34;&gt;&#xD;&#xA;  Thread&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#thread&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;Threads are minimal version of processes. They are created, managed and scheduled by a proces. Threads shares the same memory and resources, making data exchanges easy and fast.&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
+      <title>Learning Path</title>
       <link>http://localhost:1313/posts/learningpath/</link>
       <pubDate>Mon, 21 Oct 2024 11:43:32 +0800</pubDate>
       <guid>http://localhost:1313/posts/learningpath/</guid>
-      <description></description>
+      <description>&lt;h3 id=&#34;241021&#34;&gt;&#xD;&#xA;  24/10/21&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#241021&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Process &amp;amp; Thread&lt;/li&gt;&#xA;&lt;li&gt;Concurrency &amp;amp; Parallelism&lt;/li&gt;&#xA;&lt;li&gt;Lock&lt;/li&gt;&#xA;&lt;li&gt;MVC&lt;/li&gt;&#xA;&lt;li&gt;JWT&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;242022&#34;&gt;&#xD;&#xA;  24/20/22&#xD;&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#242022&#34;&gt;&#xD;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xD;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xD;&#xA;  &lt;/a&gt;&#xD;&#xA;&lt;/h2&gt;&#xD;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;RESTful API&lt;/li&gt;&#xA;&lt;li&gt;Angular commit message&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
     <item>
       <title>First Post</title>

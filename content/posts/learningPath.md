@@ -18,3 +18,7 @@ series = []
 3. Lock
 4. MVC
 5. JWT
+
+## 24/20/22
+1. RESTful API
+2. Angular commit message
