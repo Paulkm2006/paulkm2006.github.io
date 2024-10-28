@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <title>
   Task1 Notes · Paul&#39;s Blog
 </title>
@@ -34,7 +34,7 @@ E.g. suppose we&rsquo;re calling a function that should either return a value or
 ctx := context.Background() codeInRedis, err := RedisClient.Get(ctx, email).Result() Upon reading some documents, I found that the context being forwarded here, context.Background() does’n t seem to contain any meaningful action. However, the package context itself is quite useful.
 E.g. suppose we’re calling a function that should either return a value or end after a timeout. Normally, we can achieve that by passing a timer, and handle the timeout internally in the goroutime.">
 
-<meta property="og:url" content="http://localhost:1313/posts/task1/">
+<meta property="og:url" content="https://paulkm2006.github.io/posts/task1/">
   <meta property="og:site_name" content="Paul&#39;s Blog">
   <meta property="og:title" content="Task1 Notes">
   <meta property="og:description" content="What is ‘context’Link to headingIn go-redis, all function calls requires a additional parameter called ‘context’, which should be simply predefined like this
@@ -44,12 +44,12 @@ E.g. suppose we’re calling a function that should either return a value or end
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-10-23T14:46:13+08:00">
-    <meta property="article:modified_time" content="2024-10-23T14:46:13+08:00">
+    <meta property="article:modified_time" content="2024-10-28T11:03:10+08:00">
 
 
 
 
-<link rel="canonical" href="http://localhost:1313/posts/task1/">
+<link rel="canonical" href="https://paulkm2006.github.io/posts/task1/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -59,7 +59,7 @@ E.g. suppose we’re calling a function that should either return a value or end
 
   
   
-  <link rel="stylesheet" href="/css/coder.css" media="screen">
+  <link rel="stylesheet" href="/css/coder.min.aa5ef26fa979d6793724ae2dbd71efa94fd16cb1c5c7db3b6651f21f9892a5fd.css" integrity="sha256-ql7yb6l51nk3JK4tvXHvqU/RbLHFx9s7ZlHyH5iSpf0=" crossorigin="anonymous" media="screen" />
 
 
 
@@ -69,7 +69,7 @@ E.g. suppose we’re calling a function that should either return a value or end
   
     
     
-    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
   
 
 
@@ -117,7 +117,7 @@ E.g. suppose we’re calling a function that should either return a value or end
     <nav class="navigation">
   <section class="container">
     
-    <a class="navigation-title" href="http://localhost:1313/">
+    <a class="navigation-title" href="https://paulkm2006.github.io/">
       Paul&#39;s Blog
     </a>
     
@@ -152,7 +152,7 @@ E.g. suppose we’re calling a function that should either return a value or end
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="http://localhost:1313/posts/task1/">
+            <a class="title-link" href="https://paulkm2006.github.io/posts/task1/">
               Task1 Notes
             </a>
           </h1>
@@ -222,7 +222,8 @@ Since pipelines are handled by kernel in memory buffer, it doesn&rsquo;t involve
 </h3>
 <p>This operator redirects stdout to a file. Note that &gt; overrides the file if exist, while &raquo; append to the file.
 If we want to redirect stderr and stdout into the same file, we can use <code>cmd &gt; file 2&gt;&amp;1</code>. It combines stderr(2) with stdout(1).
-Also, we can separate stderr and stdout into different files like <code>cmd 1&gt;out 2&gt;err</code></p>
+Also, we can separate stderr and stdout into different files like <code>cmd 1&gt;out 2&gt;err</code>
+We can use <code>cmd &gt; /dev/null</code> to &lsquo;silence&rsquo; the command. (redirect its stdout to null so it won&rsquo;t print anything on console)</p>
 <h3 id="the--operator-1">
   The <code>&lt;</code> operator
   <a class="heading-link" href="#the--operator-1">
@@ -287,7 +288,7 @@ E.g.</p>
 
   
   
-  <script src="/js/coder.js"></script>
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
   
 
   
