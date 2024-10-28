@@ -87,3 +87,7 @@ where the modification is implemented, usually the name of the module
 #### subject
 what does the modification try to do
 
+## API Docs
+
+![OpenAPI Document](https://swagger.io/docs/specification/v3_0/about/)
+

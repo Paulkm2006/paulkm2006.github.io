@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Task1 Notes · Paul&#39;s Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="description" content="
+  What is &lsquo;context&rsquo;
+  
+    
+    Link to heading
+  
+
+In go-redis, all function calls requires a additional parameter called &lsquo;context&rsquo;, which should be simply predefined like this
+ctx := context.Background()
+codeInRedis, err := RedisClient.Get(ctx, email).Result()
+Upon reading some documents, I found that the context being forwarded here, context.Background() does&rsquo;n t seem to contain any meaningful action. However, the package context itself is quite useful.
+E.g. suppose we&rsquo;re calling a function that should either return a value or end after a timeout. Normally, we can achieve that by passing a timer, and handle the timeout internally in the goroutime.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Task1 Notes">
+  <meta name="twitter:description" content="What is ‘context’Link to headingIn go-redis, all function calls requires a additional parameter called ‘context’, which should be simply predefined like this
+ctx := context.Background() codeInRedis, err := RedisClient.Get(ctx, email).Result() Upon reading some documents, I found that the context being forwarded here, context.Background() does’n t seem to contain any meaningful action. However, the package context itself is quite useful.
+E.g. suppose we’re calling a function that should either return a value or end after a timeout. Normally, we can achieve that by passing a timer, and handle the timeout internally in the goroutime.">
+
+<meta property="og:url" content="http://localhost:1313/posts/task1/">
+  <meta property="og:site_name" content="Paul&#39;s Blog">
+  <meta property="og:title" content="Task1 Notes">
+  <meta property="og:description" content="What is ‘context’Link to headingIn go-redis, all function calls requires a additional parameter called ‘context’, which should be simply predefined like this
+ctx := context.Background() codeInRedis, err := RedisClient.Get(ctx, email).Result() Upon reading some documents, I found that the context being forwarded here, context.Background() does’n t seem to contain any meaningful action. However, the package context itself is quite useful.
+E.g. suppose we’re calling a function that should either return a value or end after a timeout. Normally, we can achieve that by passing a timer, and handle the timeout internally in the goroutime.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-10-23T14:46:13+08:00">
+    <meta property="article:modified_time" content="2024-10-23T14:46:13+08:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/task1/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Paul&#39;s Blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts">Posts</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/task1/">
+              Task1 Notes
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-10-23T14:46:13&#43;08:00">
+                October 23, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="what-is-context">
+  What is &lsquo;context&rsquo;
+  <a class="heading-link" href="#what-is-context">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In go-redis, all function calls requires a additional parameter called &lsquo;context&rsquo;, which should be simply predefined like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">ctx</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>()
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">codeInRedis</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">RedisClient</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">email</span>).<span style="color:#a6e22e">Result</span>()
+</span></span></code></pre></div><p>Upon reading some documents, I found that the context being forwarded here, <code>context.Background()</code> does&rsquo;n t seem to contain any meaningful action. However, the package <code>context</code> itself is quite useful.</p>
+<p>E.g. suppose we&rsquo;re calling a function that should either return a value or end after a timeout. Normally, we can achieve that by passing a timer, and handle the timeout internally in the goroutime.</p>
+<p>However, we can also pass a <code>context.WithDeadline</code>. This generates a channel for the goroutine to continuously check whether it should break, and (if there&rsquo;s any,) why it should be ended.</p>
+<p>Since we just want the data we provided to be read/written into Redis server, so a simple no-constraint background should be enough.</p>
+<p><img src="https://www.topgoer.com/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%87%86%E5%BA%93/Context.html" alt="reference"></p>
+<h2 id="shell-pipeline--redirection">
+  Shell pipeline &amp; redirection
+  <a class="heading-link" href="#shell-pipeline--redirection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Linux shell offers its users some great tools named pipeline and redirection. Basically, it allows us to redirect output of one command to the input of another command. Note that the operator &lt; &gt; and &raquo; supports file descriptors (which means that it can be used on file operations).</p>
+<h3 id="the--operator">
+  The <code>|</code> operator
+  <a class="heading-link" href="#the--operator">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This operator simply redirect the output of its first parameter to the input of its second parameter.
+E.g. <code>ls | grep test</code> means take the output of <code>ls</code> command as the input of <code>grep</code> command, and print out the final result from <code>grep</code> to the console.
+| can also be used in chain, meaning that we can form a chain of processing to obtain the final result.
+E.g. <code>ls | grep test | sort</code> returns the filtered and sorted result of <code>ls</code>.
+Since pipelines are handled by kernel in memory buffer, it doesn&rsquo;t involve any disk operation or requires additional configuration by software developers.</p>
+<h3 id="the--and--operator">
+  The <code>&gt;</code> and <code>&gt;&gt;</code> operator
+  <a class="heading-link" href="#the--and--operator">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This operator redirects stdout to a file. Note that &gt; overrides the file if exist, while &raquo; append to the file.
+If we want to redirect stderr and stdout into the same file, we can use <code>cmd &gt; file 2&gt;&amp;1</code>. It combines stderr(2) with stdout(1).
+Also, we can separate stderr and stdout into different files like <code>cmd 1&gt;out 2&gt;err</code></p>
+<h3 id="the--operator-1">
+  The <code>&lt;</code> operator
+  <a class="heading-link" href="#the--operator-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This operator redirects a file as the stdin of the command.</p>
+<h3 id="the--operator-here-document">
+  The <code>&lt;&lt;</code> operator (here document)
+  <a class="heading-link" href="#the--operator-here-document">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>We can use &laquo; to send a multi-line parameter to a command.
+E.g.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wc -l <span style="color:#e6db74">&lt;&lt;EOF
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">test1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">test2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span></code></pre></div><p>will output 2</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+    
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>

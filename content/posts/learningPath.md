@@ -18,7 +18,16 @@ series = []
 3. Lock
 4. MVC
 5. JWT
+6. Echo and Gorm
 
-## 24/20/22
+## 24/10/22
 1. RESTful API
 2. Angular commit message
+
+## 24/10/23
+1. API document writing
+2. go-redis
+3. send mail
+
+## 24/10/28
+1. Shell pipeline & redirection
