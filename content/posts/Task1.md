@@ -26,7 +26,7 @@ However, we can also pass a `context.WithDeadline`. This generates a channel for
 
 Since we just want the data we provided to be read/written into Redis server, so a simple no-constraint background should be enough.
 
-![reference](https://www.topgoer.com/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%87%86%E5%BA%93/Context.html)
+[reference](https://www.topgoer.com/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%87%86%E5%BA%93/Context.html)
 
 ## Shell pipeline & redirection
 Linux shell offers its users some great tools named pipeline and redirection. Basically, it allows us to redirect output of one command to the input of another command. Note that the operator < > and >> supports file descriptors (which means that it can be used on file operations).
