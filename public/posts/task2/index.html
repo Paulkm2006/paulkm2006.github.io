@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Task2 notes · Paul&#39;s Blog
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="description" content="
+  Dockerfile
+  
+    
+    Link to heading
+  
+
+A Dockerfile is used to build a docker container. We can specify the container&rsquo;s building command, running command and resources in it.
+
+  Multistage build
+  
+    
+    Link to heading
+  
+
+We can split the building process of a complete image into small stages. E.g. create a &lsquo;builder&rsquo; stage to compile your application, and then specify its startup parameters in the main stage.">
+<meta name="keywords" content="">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Task2 notes">
+  <meta name="twitter:description" content="DockerfileLink to headingA Dockerfile is used to build a docker container. We can specify the container’s building command, running command and resources in it.
+Multistage buildLink to headingWe can split the building process of a complete image into small stages. E.g. create a ‘builder’ stage to compile your application, and then specify its startup parameters in the main stage.">
+
+<meta property="og:url" content="http://localhost:1313/posts/task2/">
+  <meta property="og:site_name" content="Paul&#39;s Blog">
+  <meta property="og:title" content="Task2 notes">
+  <meta property="og:description" content="DockerfileLink to headingA Dockerfile is used to build a docker container. We can specify the container’s building command, running command and resources in it.
+Multistage buildLink to headingWe can split the building process of a complete image into small stages. E.g. create a ‘builder’ stage to compile your application, and then specify its startup parameters in the main stage.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-14T21:33:43+08:00">
+    <meta property="article:modified_time" content="2024-11-14T21:33:43+08:00">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/task2/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Paul&#39;s Blog
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts">Posts</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/task2/">
+              Task2 notes
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-11-14T21:33:43&#43;08:00">
+                November 14, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              3-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="dockerfile">
+  Dockerfile
+  <a class="heading-link" href="#dockerfile">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>A Dockerfile is used to build a docker container. We can specify the container&rsquo;s building command, running command and resources in it.</p>
+<h3 id="multistage-build">
+  Multistage build
+  <a class="heading-link" href="#multistage-build">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>We can split the building process of a complete image into small stages. E.g. create a &lsquo;builder&rsquo; stage to compile your application, and then specify its startup parameters in the main stage.</p>
+<h3 id="ports-vs-export">
+  Ports vs export
+  <a class="heading-link" href="#ports-vs-export">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>When a pair of ports <code>host_port:image_port</code> is specified, docker will forward the port onto the host&rsquo;s network interface, allowing external access.
+In contrast, when a port is specified using expose, it will only be available in the local machine&rsquo;s docker networks.</p>
+<p>For services that doesn&rsquo;t require external access (like databases, message queues), it&rsquo;s a good idea to keep their access within the local machine.</p>
+<h3 id="how-containers-communicate-with-each-other">
+  How containers communicate with each other
+  <a class="heading-link" href="#how-containers-communicate-with-each-other">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="bridged-network">
+  Bridged network
+  <a class="heading-link" href="#bridged-network">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>When a container&rsquo;s network type is not specified, Docker will connect the container using the default bridge network. This allows containers to communicate with each other using their container names as hostnames.</p>
+<p>We can also create our own bridge network to control which instances can connect to who.</p>
+<h4 id="overlay-network">
+  Overlay network
+  <a class="heading-link" href="#overlay-network">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>In Docker Swarm clusters, we can put containers into a overlay network, allowing them to communicate with each other, regardless whether they are on the same host or not.</p>
+<h2 id="docker-compose">
+  Docker Compose
+  <a class="heading-link" href="#docker-compose">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>For applications that requires external services like databases, we can integrate the required service in the built docker image. However, doing so will cause the size of the image to increase significantly, and also making it hard to update or config the services.</p>
+<p>Luckily, Docker compose is here to help! By writing a <code>docker-compose.yml</code> file, we can create and manage multiple images together.</p>
+<p>A typical <code>docker-compose.yml</code> looks like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">nginx</span>: <span style="color:#75715e"># name of the service</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">nginx:latest</span> <span style="color:#75715e"># Original image</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">nginx</span> <span style="color:#75715e"># container name, will be used as hostname for inter-container access</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">80</span>:<span style="color:#ae81ff">80</span> <span style="color:#75715e"># Map port 80 on the host to port 80 on the container</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">./nginx.conf:/etc/nginx/nginx.conf</span> <span style="color:#75715e"># Mount the local nginx.conf file to the container</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">depends_on</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">hello</span> <span style="color:#75715e"># Wait for the hello service to be ready before starting the nginx service</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">hello</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">build</span>: <span style="color:#ae81ff">.</span> <span style="color:#75715e"># Build the image from the Dockerfile in the current directory</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">hello</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">expose</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">8080</span> <span style="color:#75715e"># Expose port 8080 on the container, allowing other services to access it</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">develop</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">watch</span>: <span style="color:#75715e"># watch file changes</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">action</span>: <span style="color:#ae81ff">sync</span> <span style="color:#75715e"># sync the file if it&#39;s changed outside the container</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">path</span>: <span style="color:#ae81ff">./web</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">target</span>: <span style="color:#ae81ff">/src/web</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">ignore</span>:
+</span></span><span style="display:flex;"><span>            - <span style="color:#ae81ff">node_modules/</span>
+</span></span><span style="display:flex;"><span>        - <span style="color:#f92672">action</span>: <span style="color:#ae81ff">rebuild</span> <span style="color:#75715e"># rebuild the container on changes</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">path</span>: <span style="color:#ae81ff">package.json</span>
+</span></span></code></pre></div>
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+    
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
