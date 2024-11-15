@@ -31,3 +31,8 @@ series = []
 
 ## 24/10/28
 1. Shell pipeline & redirection
+
+## 24/11/15 and before
+1. Docker
+2. Rust + Actix + Reqwest
+3. Regex

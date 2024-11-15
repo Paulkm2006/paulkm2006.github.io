@@ -11,7 +11,7 @@ externalLink = ""
 series = []
 +++
 
-## Dockerfile
+# Dockerfile
 
 A Dockerfile is used to build a docker container. We can specify the container's building command, running command and resources in it.
 
@@ -37,7 +37,7 @@ We can also create our own bridge network to control which instances can connect
 
 In Docker Swarm clusters, we can put containers into a overlay network, allowing them to communicate with each other, regardless whether they are on the same host or not.
 
-## Docker Compose
+# Docker Compose
 
 For applications that requires external services like databases, we can integrate the required service in the built docker image. However, doing so will cause the size of the image to increase significantly, and also making it hard to update or config the services.
 
@@ -70,3 +70,5 @@ services:
         - action: rebuild # rebuild the container on changes
           path: package.json
 ```
+
+# Various testing methods

@@ -3,13 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-11-14T21:33:43+08:00</lastmod>
+    <lastmod>2024-11-15T15:57:14+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-11-14T21:33:43+08:00</lastmod>
+    <lastmod>2024-11-15T15:57:14+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/task2/</loc>
-    <lastmod>2024-11-14T21:33:43+08:00</lastmod>
+    <lastmod>2024-11-15T15:57:14+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/task1/</loc>
     <lastmod>2024-10-28T11:09:37+08:00</lastmod>
@@ -19,9 +19,6 @@
   </url><url>
     <loc>http://localhost:1313/posts/learningpath/</loc>
     <lastmod>2024-10-28T11:03:10+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/quickstart/</loc>
-    <lastmod>2024-10-21T11:32:57+08:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2024-10-21T11:45:17+08:00</lastmod>

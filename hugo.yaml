@@ -10,8 +10,25 @@ enableEmoji: true
 
 params:
   colorScheme: auto
-  description: "Paul's Blog"
+  description: Paul's Blog
   showTop: true
+  author: Paul Liu
+  keywords: backend,blog,programming,technology
+  info: 
+    - Student of HUST
+    - Backend Developer
+  social:
+    github:
+      icon: fa-brands fa-github fa-2x
+      weight: 1
+      url: https://github.com/paulkm2006
+    RSS:
+      icon: fa-solid fa-rss fa-2x
+      weight: 2
+      url: /index.xml
+      type: application/rss+xml
+      rel: alternate
+
 
 taxonomies:
   tag: tags

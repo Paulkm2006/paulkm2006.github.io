@@ -12,6 +12,7 @@
 
 
 
+<meta name="author" content="Paul Liu">
 <meta name="description" content="
   Dockerfile
   
@@ -28,7 +29,7 @@ A Dockerfile is used to build a docker container. We can specify the container&r
   
 
 We can split the building process of a complete image into small stages. E.g. create a &lsquo;builder&rsquo; stage to compile your application, and then specify its startup parameters in the main stage.">
-<meta name="keywords" content="">
+<meta name="keywords" content="backend,blog,programming,technology">
 
 
 
@@ -46,7 +47,7 @@ Multistage buildLink to headingWe can split the building process of a complete
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-11-14T21:33:43+08:00">
-    <meta property="article:modified_time" content="2024-11-14T21:33:43+08:00">
+    <meta property="article:modified_time" content="2024-11-15T15:57:14+08:00">
 
 
 
@@ -180,13 +181,13 @@ Multistage buildLink to headingWe can split the building process of a complete
 
       <div class="post-content">
         
-        <h2 id="dockerfile">
+        <h1 id="dockerfile">
   Dockerfile
   <a class="heading-link" href="#dockerfile">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>A Dockerfile is used to build a docker container. We can specify the container&rsquo;s building command, running command and resources in it.</p>
 <h3 id="multistage-build">
   Multistage build
@@ -230,13 +231,13 @@ In contrast, when a port is specified using expose, it will only be available in
   </a>
 </h4>
 <p>In Docker Swarm clusters, we can put containers into a overlay network, allowing them to communicate with each other, regardless whether they are on the same host or not.</p>
-<h2 id="docker-compose">
+<h1 id="docker-compose">
   Docker Compose
   <a class="heading-link" href="#docker-compose">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>For applications that requires external services like databases, we can integrate the required service in the built docker image. However, doing so will cause the size of the image to increase significantly, and also making it hard to update or config the services.</p>
 <p>Luckily, Docker compose is here to help! By writing a <code>docker-compose.yml</code> file, we can create and manage multiple images together.</p>
 <p>A typical <code>docker-compose.yml</code> looks like this:</p>
@@ -292,7 +293,7 @@ In contrast, when a port is specified using expose, it will only be available in
     ©
     
     2024
-    
+     Paul Liu 
     ·
     
     Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.

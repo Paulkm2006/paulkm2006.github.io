@@ -12,6 +12,7 @@
 
 
 
+<meta name="author" content="Paul Liu">
 <meta name="description" content="
   Process &amp; Thread
   
@@ -36,7 +37,7 @@ Processes are best used to complete a task that doesn&rsquo;t involve intensive 
   
 
 Threads are minimal version of processes. They are created, managed and scheduled by a proces. Threads shares the same memory and resources, making data exchanges easy and fast.">
-<meta name="keywords" content="">
+<meta name="keywords" content="backend,blog,programming,technology">
 
 
 
@@ -190,13 +191,13 @@ ThreadLink to headingThreads are minimal version of processes. They are create
 
       <div class="post-content">
         
-        <h2 id="process--thread">
+        <h1 id="process--thread">
   Process &amp; Thread
   <a class="heading-link" href="#process--thread">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <h3 id="process">
   Process
   <a class="heading-link" href="#process">
@@ -215,38 +216,38 @@ ThreadLink to headingThreads are minimal version of processes. They are create
 </h3>
 <p>Threads are minimal version of processes. They are created, managed and scheduled by a proces. Threads shares the same memory and resources, making data exchanges easy and fast.</p>
 <p>We tend to use threads everywhere from simple for loops to handling web requests, as they are easy to create, easy to terminate and have efficient communicating pathways known as channels in Go.</p>
-<h2 id="concurrency--parallelism">
+<h1 id="concurrency--parallelism">
   Concurrency &amp; Parallelism
   <a class="heading-link" href="#concurrency--parallelism">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>Both of the terms describes a way to process multiple requests using minimal time. However, their differences are also very obvious.
 <img src="/images/Task0/abeb21004d0aed99d460ecfbab8aab73.png" alt="img">
 For parallelism, a multi-core processor is required to perform true &lsquo;parallel&rsquo; computing. It is done by distributing different tasks over the processor&rsquo;s cores, achieving lower execution time.
 <img src="/images/Task0/2190b36b6bb9edb821b825cf45f8bc32.png" alt="img">
 For concurrency, however, the execution time isn&rsquo;t reduced. It just breaks down each task into smaller chunks, and execute the chunks one by one.</p>
 <p>To observers, both methods can achieve simutaneous computing. Parallelism can better increase effitiency while concurrency have less trouble controlling data modification between tasks.</p>
-<h2 id="lock">
+<h1 id="lock">
   Lock
   <a class="heading-link" href="#lock">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>In parallel computing, when we need to modify values in a database/array, we need to make sure the operation is exclusive.
 The reason is that when multiple operations (eg. read-modify-write) at the same time may cause race condition, where multiple threads might read and write to the same resource simultaneously.
 <img src="/images/Task0/nolock.png" alt="img"></p>
 <p>To avoid these potential errors, we can implement lock mechanism on variables that might be modified during parallel computing. When one thread is making changes to the variable, we block other threads from modifying the save variables, while being able to perform other operations like read and calculate. This can ensure data integrity while allowing maximize performance.
 <img src="/images/Task0/lock.png" alt="img"></p>
-<h2 id="mvc">
+<h1 id="mvc">
   MVC
   <a class="heading-link" href="#mvc">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>MVC separates a server into model, view and controller.</p>
 <h3 id="model">
   Model
@@ -272,13 +273,13 @@ The reason is that when multiple operations (eg. read-modify-write) at the same 
   </a>
 </h3>
 <p>Controller handles the request from frontend, redirect it to proper model and returns the value.</p>
-<h2 id="jwt">
+<h1 id="jwt">
   JWT
   <a class="heading-link" href="#jwt">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>In order to help multiple backend servers to identify a user, whether in a cluster or in different sites, the traditional session+cookie method will require an additional identity database, which can cause a lot of troubles when it goes down. So, in order to help simplify auth process and increase expansibility, JWT is introduced.</p>
 <p>A typical JWT contains three parts: Header, Payload and Signature, separating by a dot.</p>
 <h3 id="header">
@@ -305,24 +306,24 @@ The reason is that when multiple operations (eg. read-modify-write) at the same 
   </a>
 </h3>
 <p>Signature helps to prevent unauthorized modification to the first two parts. It is generated from a secret, using the algorithm designated in header.</p>
-<h2 id="restful-api">
+<h1 id="restful-api">
   RESTful API
   <a class="heading-link" href="#restful-api">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>A typical RESTful request should look like this.
 <img src="/images/Task0/restful_request.png" alt="img">
 Note that not all API endpoints may contain version info.</p>
 <p>And a typical RESTful response should be a JSON string containing resources designated by the request method and resource type (e.g. info of a new object for POST, a collection for GET /collection and empty document for DELETE)</p>
-<h2 id="angular-commit-message">
+<h1 id="angular-commit-message">
   Angular commit message
   <a class="heading-link" href="#angular-commit-message">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>A well-formed commit message should contain these parts:
 <code>&lt;type&gt;(&lt;scope&gt;): &lt;subject&gt;</code></p>
 <h4 id="type">
@@ -364,7 +365,7 @@ also, style test revert and build are also valid types</li>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p><img src="https://swagger.io/docs/specification/v3_0/about/" alt="OpenAPI Document"></p>
+<p><a href="https://swagger.io/docs/specification/v3_0/about/"  class="external-link" target="_blank" rel="noopener">OpenAPI Document</a></p>
 
       </div>
 
@@ -393,7 +394,7 @@ also, style test revert and build are also valid types</li>
     ©
     
     2024
-    
+     Paul Liu 
     ·
     
     Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.

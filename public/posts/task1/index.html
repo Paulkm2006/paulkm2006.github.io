@@ -12,6 +12,7 @@
 
 
 
+<meta name="author" content="Paul Liu">
 <meta name="description" content="
   What is &lsquo;context&rsquo;
   
@@ -24,7 +25,7 @@ ctx := context.Background()
 codeInRedis, err := RedisClient.Get(ctx, email).Result()
 Upon reading some documents, I found that the context being forwarded here, context.Background() does&rsquo;n t seem to contain any meaningful action. However, the package context itself is quite useful.
 E.g. suppose we&rsquo;re calling a function that should either return a value or end after a timeout. Normally, we can achieve that by passing a timer, and handle the timeout internally in the goroutime.">
-<meta name="keywords" content="">
+<meta name="keywords" content="backend,blog,programming,technology">
 
 
 
@@ -178,13 +179,13 @@ E.g. suppose we’re calling a function that should either return a value or end
 
       <div class="post-content">
         
-        <h2 id="what-is-context">
+        <h1 id="what-is-context">
   What is &lsquo;context&rsquo;
   <a class="heading-link" href="#what-is-context">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>In go-redis, all function calls requires a additional parameter called &lsquo;context&rsquo;, which should be simply predefined like this</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">ctx</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">Background</span>()
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">codeInRedis</span>, <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">RedisClient</span>.<span style="color:#a6e22e">Get</span>(<span style="color:#a6e22e">ctx</span>, <span style="color:#a6e22e">email</span>).<span style="color:#a6e22e">Result</span>()
@@ -193,13 +194,13 @@ E.g. suppose we’re calling a function that should either return a value or end
 <p>However, we can also pass a <code>context.WithDeadline</code>. This generates a channel for the goroutine to continuously check whether it should break, and (if there&rsquo;s any,) why it should be ended.</p>
 <p>Since we just want the data we provided to be read/written into Redis server, so a simple no-constraint background should be enough.</p>
 <p><a href="https://www.topgoer.com/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%87%86%E5%BA%93/Context.html"  class="external-link" target="_blank" rel="noopener">reference</a></p>
-<h2 id="shell-pipeline--redirection">
+<h1 id="shell-pipeline--redirection">
   Shell pipeline &amp; redirection
   <a class="heading-link" href="#shell-pipeline--redirection">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
-</h2>
+</h1>
 <p>Linux shell offers its users some great tools named pipeline and redirection. Basically, it allows us to redirect output of one command to the input of another command. Note that the operator &lt; &gt; and &raquo; supports file descriptors (which means that it can be used on file operations).</p>
 <h3 id="the--operator">
   The <code>|</code> operator
@@ -274,7 +275,7 @@ E.g.</p>
     ©
     
     2024
-    
+     Paul Liu 
     ·
     
     Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.

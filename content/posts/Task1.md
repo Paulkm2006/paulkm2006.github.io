@@ -11,7 +11,7 @@ externalLink = ""
 series = []
 +++
 
-## What is 'context'
+# What is 'context'
 
 In go-redis, all function calls requires a additional parameter called 'context', which should be simply predefined like this
 ```go
@@ -28,7 +28,7 @@ Since we just want the data we provided to be read/written into Redis server, so
 
 [reference](https://www.topgoer.com/%E5%B8%B8%E7%94%A8%E6%A0%87%E5%87%86%E5%BA%93/Context.html)
 
-## Shell pipeline & redirection
+# Shell pipeline & redirection
 Linux shell offers its users some great tools named pipeline and redirection. Basically, it allows us to redirect output of one command to the input of another command. Note that the operator < > and >> supports file descriptors (which means that it can be used on file operations).
 
 ### The `|` operator

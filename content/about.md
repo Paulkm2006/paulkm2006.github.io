@@ -18,4 +18,5 @@ aliases = ["about-us", "about-hugo", "contact"]
 
 ## What am I going to do next?
 
+ - Learn to use Rust
  - Learn to use Go and Echo
